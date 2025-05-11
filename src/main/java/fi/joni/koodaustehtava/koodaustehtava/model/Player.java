@@ -1,7 +1,8 @@
-package fi.joni.koodaustehtava.koodaustehtava.walletDb;
+package fi.joni.koodaustehtava.koodaustehtava.model;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 
@@ -17,7 +18,7 @@ public class Player {
     private String playerName;
 
     @Column(name = "balance")
-    private String balance;
+    private BigDecimal balance;
 
     @OneToMany(mappedBy = "player", cascade = CascadeType.ALL)
     private List<Transaction> transactions;
@@ -38,11 +39,11 @@ public class Player {
         this.playerName = playerName;
     }
 
-    public String getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(String balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 }

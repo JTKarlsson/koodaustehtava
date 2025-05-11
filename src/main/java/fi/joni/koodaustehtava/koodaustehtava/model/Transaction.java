@@ -1,6 +1,8 @@
-package fi.joni.koodaustehtava.koodaustehtava.walletDb;
+package fi.joni.koodaustehtava.koodaustehtava.model;
 
 import jakarta.persistence.*;
+
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "transaction")
@@ -17,7 +19,7 @@ public class Transaction {
     private String transactionType;
 
     @Column(name = "amount", nullable = false)
-    private String amount;
+    private BigDecimal amount;
 
     @ManyToOne
     @JoinColumn(name = "player_id")
@@ -47,11 +49,11 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    public String getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

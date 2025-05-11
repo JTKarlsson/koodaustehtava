@@ -1,11 +1,13 @@
 package fi.joni.koodaustehtava.koodaustehtava.dto;
 
+import java.math.BigDecimal;
+
 public class RequestDto {
     private String transactionId;
     private String playerId;
-    private String amount;
+    private BigDecimal amount;
 
-    public RequestDto(String transactionId, String playerId, String amount) {
+    public RequestDto(String transactionId, String playerId, BigDecimal amount) {
         this.transactionId = transactionId;
         this.playerId = playerId;
         this.amount = amount;
@@ -27,11 +29,11 @@ public class RequestDto {
         this.playerId = playerId;
     }
 
-    public String getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 }

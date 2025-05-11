@@ -1,17 +1,19 @@
 package fi.joni.koodaustehtava.koodaustehtava.model;
 
-public class CurrentBalance {
-    private String currentBalance;
+import java.math.BigDecimal;
 
-    public CurrentBalance(String currentBalance) {
+public class CurrentBalance {
+    private BigDecimal currentBalance;
+
+    public CurrentBalance(BigDecimal currentBalance) {
         this.currentBalance = currentBalance;
     }
 
-    public String getCurrentBalance() {
+    public BigDecimal getCurrentBalance() {
         return currentBalance;
     }
 
-    public void setCurrentBalance(String currentBalance) {
+    public void setCurrentBalance(BigDecimal currentBalance) {
         this.currentBalance = currentBalance;
     }
 }
