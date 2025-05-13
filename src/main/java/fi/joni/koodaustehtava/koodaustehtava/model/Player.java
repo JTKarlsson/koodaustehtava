@@ -11,13 +11,13 @@ import java.util.List;
 public class Player {
 
     @Id
-    @Column(name = "playerId")
+    @Column(name = "player_id", nullable = false, length = 255)
     private String playerId;
 
-    @Column(name = "playerName")
+    @Column(name = "player_name", nullable = false, length = 255)
     private String playerName;
 
-    @Column(name = "balance")
+    @Column(name = "balance", nullable = false, precision = 19, scale = 2)
     private BigDecimal balance;
 
     @OneToMany(mappedBy = "player", cascade = CascadeType.ALL)

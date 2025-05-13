@@ -9,16 +9,16 @@ import java.math.BigDecimal;
 public class Transaction {
 
     @Id
-    @Column(name = "transaction_id")
+    @Column(name = "transaction_id", nullable = false, length = 255)
     private String transactionId;
 
-    @Column(name = "timestamp", nullable = false)
+    @Column(name = "timestamp", nullable = false, length = 255)
     private String timestamp;
 
-    @Column(name = "transaction_type", nullable = false)
+    @Column(name = "transaction_type", nullable = false, length = 255)
     private String transactionType;
 
-    @Column(name = "amount", nullable = false)
+    @Column(name = "amount", nullable = false, precision = 19, scale = 2)
     private BigDecimal amount;
 
     @ManyToOne
